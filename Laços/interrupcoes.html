@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            alert("Digite 0 para sair") 
+            do {
+                const num = Number(prompt("Número: "))  // lê o número
+                if (num === 0 || isNaN(num)) {  // se 'num = 0' inválido
+                    const sair = confirm ("Confirmar saída?")  // solicita confirmação do usuário pra sair
+                    if (sair) { // Se o usuário confirmou que quer sair (sair == true), o break interrompe completamente o laço, saindo do do...while.
+                        break  
+                    } else {  // Caso contrário (else), o continue pula o restante do loop e volta para o while, pedindo outro número.
+                        continue
+                    }
+                }
+                if (num % 2 === 0) {  // Esses `if/else` só são executados **se o número for diferente de 0 e for válido**.
+                                     // Verifica se o número é **par** (`num % 2 === 0` → resto da divisão por 2 é 0):
+                                    // Se for, mostra o **dobro** do número.
+                                   // Se for ímpar, mostra o **triplo**.
+                    alert(`O dobro de ${num} é: ${num * 2}`)
+                } else {
+                    alert(`O triplo de ${num} é: ${num * 3}`)
+                }
+            } while (true) // A condição do while é true, ou seja, o laço só para quando o break for executado. Isso torna o loop infinito, a menos que o usuário escolha sair.
+            alert("Bye, bye...")
+        </script>
+    </body>
+</html>

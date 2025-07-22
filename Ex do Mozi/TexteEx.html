@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Tiro ao Alvo 🎯</h1>
+    <form>
+        <label><input type="radio" name="escolha" value="Sortear">Sortear</label><br>
+        <input type="number" min="1" max="30" id="inNumero" required>
+        <input type="submit" value="Verificar" id="btSubmit">
+        <p>
+            <input type="button" value="Jogar Novamente" id="btNewGame">
+        </p>
+    </form>
+    <h3 id="outResp"></h3>
+    <h3 id="outErros">Palpites: </h3>
+    <h3 id="outChances">Chances restantes: 5</h3>
+    <script src="../Js/TesteEx.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <h1>Programa Contas do Mês</h1>
+        <form>
+            <p>Descrição da Conta:
+                <input type="text" id="inDescricao" required>
+            </p>
+            <p>Valor a pagar:
+                <input type="number" min="0" step="0.01" id="inValor" required>
+            </p>
+            <input type="submit" value="Registrar Conta">
+        </form>
+        <pre id="resp1"></pre>
+        <pre id="resp2"></pre>
+        <pre id="resp3"></pre>
+        <script src="../Js/contadorContas.js"></script>
+    </body>
+</html>

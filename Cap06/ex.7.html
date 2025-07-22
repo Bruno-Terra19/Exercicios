@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Jogo Descubra o Número</h1>
+    <form>
+        <p>
+             Número:
+             <input type="number" min="1" max="100" id="inNumero" required>
+             <input type="submit" value="Apostar" id="btSubmit">
+             <input type="button" value="Jogar Novamente" id="btNovo" class="oculta"> 
+            <!-- Um campo para digitar um número de 1 a 100.
+            Um botão para apostar (envia o número).
+            Um botão para jogar novamente, inicialmente escondido com a classe oculta.-->
+        </p>
+    </form>
+    <h3>Erros: <span id="outErros">0</span></h3> <!--está sendo usado para isolar o número que será atualizado pelo JavaScript, sem precisar trocar toda a linha de texto do <h3>.-->
+    <h3>Chances: <span id="outChances">6</span></h3>
+    <h3 id="outDica" class="italico">Dica: É um número entre 1 e 100</h3>
+    <script src="../Js/ex7Cap06.js"></script>
+</body>
+</html>

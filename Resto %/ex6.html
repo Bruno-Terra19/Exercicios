@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <script>
+            const pessoas = Number(prompt("N° Pessoas: "))
+            const peixes = Number(prompt("N° Peixes: "))
+            let pagar
+
+            if (peixes <= pessoas) {
+                pagar = pessoas * 20
+            } else {
+                pagar = (pessoas * 20) + ((peixes - pessoas) * 12)
+            }
+            alert(`Pagar R$: ${pagar.toFixed(2)}`)
+        </script>
+    </body>
+</html>
