@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Simulador de Preço com Desconto 🏷</h1>
+    <form>
+        <p>
+            Produto:
+            <input type="text" id="inText">
+            Preço:
+            <input type="number" step="any" id="inNumber">
+            <input type="button" value="Adicionar" id="btAdd">
+        </p>
+        <p>
+            Valor do Desconto:
+            <input type="number" id="inDesconto">
+            <input type="button" value="Adicionar Desconto" id="btDesconto">
+        </p>
+        <input type="submit" value="Calcular Desconto">
+        <input type="button" value="Recomeçar" id="btClear">
+    </form>
+    <pre id="outAntigo"></pre>
+    <pre id="outDesconto"></pre>
+    <script src="../Js/SimuladorPreço.js"></script>
+</body>
+</html>
