@@ -1,0 +1,18 @@
+<script>
+    const anuncio = prompt("Anúncio: ")
+//Exibe uma caixa de prompt pedindo que o usuário digite um texto (neste caso, um anúncio).
+//O valor digitado é armazenado na variável anuncio.
+    let numPalavras = 0 // Inicializa a variável numPalavras, que vai contar quantos espaços existem no texto (cada espaço separa uma palavra).
+    const tam = anuncio.length // Guarda o tamanho (número de caracteres) do texto em tam.
+    for (let i = 0; i < tam; i++) {
+        if (anuncio.charAt(i) == " ") {
+            numPalavras++
+        }
+/*Esse for percorre cada caractere do texto.
+A cada espaço (" "), incrementa numPalavras.
+Isso porque cada espaço indica que existe mais de uma palavra.*/
+    }
+
+    alert(`Anúncio: ${anuncio}\nN° Palavras: ${(numPalavras + 1)}`) // Adiciona +1 ao total de espaços, 
+    // porque o número de palavras é 1 a mais que o número de espaços (por exemplo: "oi tudo bem" tem 2 espaços, mas 3 palavras).
+</script>

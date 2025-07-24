@@ -1,0 +1,24 @@
+<script>
+    const palavra = prompt("Palavra: ")
+    const tam = palavra.length // Calcula o tamanho da palavra digitada. "Abacaxi" tem 7 letras → tam = 7
+
+    let inverso = palavra.charAt(tam - 1).toUpperCase()
+/*Pega o último caractere da palavra usando charAt(tam - 1).
+Converte para maiúscula com .toUpperCase().
+Em "Abacaxi", isso seria:
+→ "i" → "I"
+inverso = "I" (iniciamos a string invertida por aqui)*/
+
+    for (let i = tam - 2; i >= 0; i--){
+        inverso += palavra.charAt(i).toLowerCase()
+    }
+/*Um for que anda de trás pra frente, pegando cada letra da palavra (menos a última, que já pegamos).
+Cada letra é adicionada ao inverso, mas agora em minúscula.
+No caso de "Abacaxi":
+tam - 2 = 5 → começamos do "x"
+Adiciona: x, a, c, a, b, A → tudo em minúsculo.
+Resultado final: "IxacabA" → mas o .toLowerCase() transforma tudo após o "I" em minúsculo:
+I + x + a + c + a + b + a → Ixacaba.*/
+
+    alert(`Palavra: ${palavra}\nInvertida: ${inverso}`)
+</script>
