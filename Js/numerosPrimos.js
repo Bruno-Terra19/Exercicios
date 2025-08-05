@@ -16,9 +16,9 @@ frm.addEventListener("submit", (e) => {
         }
     }
     if (numDivisores === 2) {
-        resp1.innerText = `${num} é primo`
+        resp1.innerText += `${num} é primo\n`
     } else {
-        resp1.innerText = `${num} não é primo`
+        resp1.innerText += `${num} não é primo\n`
     }
     /* Depois do laço:
 - Verifica se o número tem **exatamente 2 divisores** (por 1 e por ele mesmo).
