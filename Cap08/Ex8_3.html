@@ -1,0 +1,19 @@
+<script>
+    const calcularMedia = (...notas) => { //...notas é o rest operator. Ele permite que a função receba qualquer quantidade de parâmetros e coloque todos dentro de um array chamado notas.
+        const num = notas.length
+        if (num === 0) {
+            console.log("Informe, no mínimo, uma nota") // Se nenhuma nota foi passada, mostra uma mensagem no console e para a função com return.
+        }
+        let soma = 0 // let soma = 0 começa com zero.
+        for (const nota of notas) { // O for...of percorre cada elemento do array notas e acumula o valor na variável soma.
+            soma += nota
+        }
+        const media = soma / num // Divide a soma das notas pela quantidade de notas (num).
+        console.log(`Média: ${media.toFixed(1)}`)
+    }
+
+    calcularMedia(6, 7, 8) // media: 7.0
+    calcularMedia(2, 10) // media: 6.0
+    calcularMedia(7.5, 10, 8, 9.5) // media: 8.8
+    calcularMedia() 
+</script>
