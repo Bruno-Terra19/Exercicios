@@ -53,5 +53,5 @@ frm.addEventListener("submit", (e) => {
 
     frm.reset()
     frm.rbPizza.dispatchEvent(new ErrorEvent("click")) 
-// Reseta o formulário. E força a seleção voltar para Pizza como padrão.
+// Reseta o formulário. 0E força a seleção voltar para Pizza como padrão.
 })
