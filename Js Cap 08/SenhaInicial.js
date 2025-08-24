@@ -1,23 +1,26 @@
 const frm = document.querySelector("form")
 const resp = document.querySelector("h3")
 
-// 1. Validar se o nome é completo
 function validarNome(nome) {
   let partes = nome.trim().split(/\s+/);
-  return partes.length >= 2; // true se tem pelo menos 2 palavras
+  return partes.length >= 2; 
 }
+// trim() remove espaços extras no começo/fim. 
+// split(/\s+/) divide pelo(s) espaço(s) (inclusive múltiplos). 
+// Retorna true se houver ao menos 2 “palavras” (nome e sobrenome).
 
-// 2. Obter o sobrenome em letras minúsculas
 function obterSobrenome(nome) {
   let partes = nome.trim().split(/\s+/);
   let sobrenome = partes[partes.length - 1];
   return sobrenome.toLowerCase();
 }
+// Divide o nome em partes e pega a última como sobrenome. 
+// Converte para minúsculas. 
+// Ex.: “Ana Maria Silva” → silva
 
-// 3. Contar vogais e retornar com 2 dígitos
 function contarVogais(nome) {
-  let texto = nome.toLowerCase();
-  let vogais = "aeiou";
+  let texto = nome.toLowerCase(); // Coloca tudo em minúsculas para facilitar.
+  let vogais = "aeiou"; // Percorre cada letra e soma se estiver em "aeiou".
   let contador = 0;
 
   for (let letra of texto) {
@@ -26,14 +29,13 @@ function contarVogais(nome) {
     }
   }
 
-  return String(contador).padStart(2, "0");
+  return String(contador).padStart(2, "0"); // padStart(2, "0") garante 2 dígitos (ex.: 7 → "07").
 }
 
-// --- Evento principal ---
 frm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  let nome = frm.inTexto.value; // precisa ter <input name="inTexto">
+  let nome = frm.inTexto.value;
 
   if (!validarNome(nome)) {
     resp.innerText = "⚠️ Digite o nome completo!";
@@ -43,6 +45,7 @@ frm.addEventListener("submit", (e) => {
   let sobrenome = obterSobrenome(nome);
   let qtdVogais = contarVogais(nome);
   let senha = sobrenome + qtdVogais;
+  // Calcula sobrenome, qtdVogais e concatena em senha.
 
   resp.innerText = "Senha inicial: " + senha;
 });
