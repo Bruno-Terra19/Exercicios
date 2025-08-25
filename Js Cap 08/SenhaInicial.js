@@ -28,6 +28,8 @@ function contarVogais(nome) {
       contador++;
     }
   }
+  // O for...of percorre cada elemento de uma coleção (array, string, etc.). Como texto é uma string, cada letra vai ser um caractere dela, de forma sequencial.
+  // .includes(...) verifica se dentro da string "aeiou" existe aquele caractere. Retorna true se encontrar, false se não.
 
   return String(contador).padStart(2, "0"); // padStart(2, "0") garante 2 dígitos (ex.: 7 → "07").
 }

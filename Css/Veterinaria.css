@@ -1,0 +1,203 @@
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #006978;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #4db6ac, #006978);
+    border-radius: 2px;
+}
+
+form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 105, 120, 0.15);
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #006978;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #b2dfdb;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: all 0.3s;
+    outline: none;
+}
+
+input[type="number"]:focus {
+    border-color: #006978;
+    box-shadow: 0 0 0 3px rgba(0, 105, 120, 0.2);
+}
+
+/* CORREÇÃO DOS RADIO BUTTONS - AGORA VISÍVEIS */
+.radio-container {
+    margin: 15px 0;
+}
+
+input[type="radio"] {
+    /* Torna os radios visíveis novamente */
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    position: relative;
+    top: 3px;
+    accent-color: #006978; /* Cor personalizada para os radios */
+}
+
+.radio-option {
+    display: block;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    background-color: #f8f9fa;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.radio-option:hover {
+    background-color: #e8f5f4;
+    border-color: #80cbc4;
+}
+
+input[type="radio"]:checked + .radio-option {
+    background-color: #e0f2f1;
+    border-color: #4db6ac;
+    color: #00796b;
+    font-weight: 600;
+}
+
+/* Estilização do botão */
+input[type="submit"] {
+    background: linear-gradient(135deg, #006978 0%, #004d59 100%);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 105, 120, 0.3);
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #00838f 0%, #006978 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 105, 120, 0.4);
+}
+
+input[type="submit"]:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 105, 120, 0.3);
+}
+
+pre {
+    background-color: white;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 500px;
+    min-height: 100px;
+    font-family: 'Consolas', monospace;
+    color: #006978;
+    border-left: 4px solid #4db6ac;
+}
+
+/* Elementos decorativos */
+body:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(179, 229, 252, 0.5) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(77, 182, 172, 0.4) 0%, transparent 20%);
+    z-index: -1;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    input[type="submit"] {
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+form, pre {
+    animation: fadeIn 0.5s ease-out;
+}
