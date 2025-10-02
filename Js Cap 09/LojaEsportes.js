@@ -53,3 +53,26 @@ const verificarClube = () => {
 }
 
 window.addEventListener("load", verificarClube) // Assim que a página terminar de carregar, a função verificarClube é executada para restaurar a escolha anterior.
+
+const pVisitas = document.querySelector("#pVisitas")
+
+const contarVisitas = () => {
+    // pega o valor salvo
+    let visitas = localStorage.getItem("contador")
+
+    if (!visitas) {
+        // primeira vez
+        visitas = 1
+        pVisitas.innerText = "Muito bem-vindo! Esta é a sua Primeira visita ao nosso site."
+    } else {
+        // já visitou antes
+        visitas = Number(visitas) + 1
+        pVisitas.innerText = `Você já visitou nosso site ${visitas} vezes.`
+    }
+
+    // salva o valor atualizado no localStorage
+    localStorage.setItem("contador", visitas)
+}
+
+// quando a página carregar, chama essa função
+window.addEventListener("load", contarVisitas)
