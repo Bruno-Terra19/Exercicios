@@ -1,0 +1,17 @@
+<script>
+
+    let positivos = 0 //contadores
+    let negativos = 0 //contadores
+    let numero = Number(prompt("Digite um número (0 para sair):")) // abre uma caixinha para digitar o numero
+
+    while (numero !== 0) { // laço while (enquanto o numero for diferente (!== 0) de zero, repita o que esta dentro do bloco.)
+        if (numero > 0) {
+            positivos++ // se for maior que zero, soma +1 no contador positivos.
+        } else {
+            negativos++ // senão, soma +1 no contador negativos.
+        }
+        numero = Number(prompt("Digite um número (0 para sair):")) // no final de cada rodada, pede outro numero ao usuario. Se for 0, o loop para.
+    }
+
+    alert(`Positivos: ${positivos}\nNegativos: ${negativos}`)
+</script>

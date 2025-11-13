@@ -1,0 +1,29 @@
+ <script>
+    let numeros = []
+
+    // Coletar 5 números
+    for (let i = 0; i < 5; i++) {
+        const n = Number(prompt(`Digite o número ${i + 1}:`))
+        numeros.push(n)
+    }
+
+    // map: dobrar os números
+    const dobrados = numeros.map(num => num * 2)
+
+    // filter: pegar números maiores que 10
+    const maioresQue10 = numeros.filter(num => num > 10)
+
+    // reduce: somar todos os números
+    const soma = numeros.reduce((total, num) => total + num, 0)
+
+    // Mostrar resultados
+    alert(
+        `Números digitados: ${numeros.join(", ")}\n` +
+        `Dobrados: ${dobrados.join(", ")}\n` +
+        `Maiores que 10: ${maioresQue10.join(", ")}\n` +
+        `Soma total: ${soma}`
+    )
+
+    // (valor, índice, arrayOriginal) são os parâmetros da função que o map, filter e reduce usam internamente.
+</script>
+

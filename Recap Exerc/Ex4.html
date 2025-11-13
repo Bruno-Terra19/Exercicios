@@ -1,0 +1,29 @@
+<script>
+
+    const num1 = Number(prompt("Digite o primeiro número:"))
+    const num2 = Number(prompt("Digite o segundo número:"))
+    const operador = prompt("Digite a operação (+, -, *, /):")
+
+    let resultado 
+
+    switch (operador) { // estrutura switch para escolher a operação
+
+        case "+":
+            resultado = num1 + num2
+            break
+        case "-":
+            resultado = num1 - num2
+            break
+        case "*":
+            resultado = num1 * num2
+            break
+        case "/":
+            resultado = num1 / num2
+            break
+        default:
+            resultado = "Operação inválida"
+    }
+
+    alert(`Resultado: ${resultado}`)
+
+</script>

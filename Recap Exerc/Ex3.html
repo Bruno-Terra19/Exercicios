@@ -1,0 +1,20 @@
+<script>
+
+    let soma = 0
+    let contador = 0
+
+    let numero = Number(prompt("Digite um número (ou 0 para sair):")) // solicita o primeiro número
+
+    while (numero !==0 ) { // enquanto o número for diferente de 0
+        soma += numero // soma = soma + numero
+        contador++ // contador = contador + 1
+        numero = Number(prompt("Digite um número (ou 0 para sair):")) // solicita outro número
+    }
+
+    if (contador > 0) { // verifica se algum número foi digitado
+        const media = soma / contador // calcula a média
+        alert(`Você digitou ${contador} números.\nSoma total: ${soma}\nMédia: ${media.toFixed(2)}`) // exibe o resultado com 2 casas decimais
+    } else {
+        alert("Nenhum número foi digitado.")
+    }
+</script>

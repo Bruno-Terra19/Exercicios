@@ -1,0 +1,192 @@
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #333;
+}
+
+/* Container principal */
+body > * {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Título */
+h3 {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+}
+
+/* Formulário */
+form {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    margin-bottom: 30px;
+}
+
+/* Parágrafos do formulário */
+form p {
+    margin-bottom: 25px;
+}
+
+/* Labels */
+form p {
+    font-weight: 600;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 8px;
+}
+
+/* Campos de input */
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e1e5ee;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #f8f9fa;
+    margin-top: 5px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Botões */
+input[type="button"] {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+#btnCadastrar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+#btnCadastrar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(102, 126, 234, 0.4);
+}
+
+#btnExibir {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+#btnExibir:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(245, 87, 108, 0.4);
+}
+
+/* Área de exibição */
+pre {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    min-height: 100px;
+    width: 100%;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-left: 4px solid #667eea;
+}
+
+/* Efeitos de foco para acessibilidade */
+input:focus {
+    outline: none;
+}
+
+/* Animações suaves */
+form, pre {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    h3 {
+        font-size: 2rem;
+    }
+    
+    form {
+        padding: 25px;
+    }
+    
+    input[type="button"] {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    
+    #btnExibir {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h3 {
+        font-size: 1.8rem;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="number"] {
+        padding: 12px;
+    }
+}

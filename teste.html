@@ -1,0 +1,18 @@
+<script>
+
+    let capitalInicial = 1000
+    let taxaJuros = 2
+    let meses = 24
+
+    let montante = capitalInicial
+    let jurosAcumulado = 0
+
+    for (let i = 0; i < meses; i++){
+        let jurosMes = montante * (taxaJuros / 100)
+        montante += jurosMes
+        jurosAcumulado += jurosMes
+    }
+
+    console.log("Valor final após 24 meses:", montante.toFixed(2))
+
+</script>

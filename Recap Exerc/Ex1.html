@@ -1,0 +1,16 @@
+<script>
+    let listaNomes = [] // array para armazenar os nomes
+
+    for (let i = 0; i < 5; i++) {
+        const nome = prompt(`Digite o nome ${i + 1}:`) // Solicita ao usuário que digite um nome
+        listaNomes.push(nome) // Adiciona o nome à lista
+    }
+
+    // Exibir os nomes em formato de lista
+    let resultado = "Lista de nomes:\n"
+    for (let i = 0; i < listaNomes.length; i++) { // Percorre a lista de nomes
+        resultado += `${i + 1}. ${listaNomes[i]}\n` // Adiciona cada nome ao resultado com numeração
+    }
+
+    alert(resultado)
+</script>
